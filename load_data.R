@@ -8,12 +8,3 @@ pow_cons <- read.table( 'household_power_consumption/household_power_consumption
 
 houpow <- subset(pow_cons,pow_cons$Date %in% c("1/2/2007","2/2/2007"))
 
-with(houpow, hist(Global_active_power, col = "red",
-                               main = "Global Active Power",
-                                 xlab = "Global Active Power (kilowatts)"    )    )
-
-## Save figure to PNG
-dev.copy(png, file = "plot1.png",width=480, 
-             height=480    )
-
-dev.off()
